@@ -14,13 +14,33 @@
     <ul>
         <li>Adicionando favicon + estrutura inicial + readme</li>
         <li>Adicionando Imagem</li>
+        <li>Adicionando listas encadeadas </li>
+        <li>Adicionando links</li>
     </ul>
-    <h1> Adicionando imagem:</h1>
-    <p>Imagem que está na mesma pasta do index.html</p>
-    <img src="game.jpg" alt="Imagem de exemplo" width="500">
-    <p>Imagem que está em um outra pasta</p>
-    <img src="../assets/image/game2.jpg" alt="Imagem de exemploo" width="400">
-    <p>Imagem externa</p>
-    <img src="https://www.einerd.com/wp-content/uploads/2025/08/Captura-de-tela-2025-08-11-145116.jpg" alt="Imagem net" width="400">
+    
+    <h3>Exemploos de listas encadeadas:</h3>
+    <ol>
+        <li>Baú de recompensa 1</li>
+        <li>Baú de recompensa 2</li>
+        <ol>
+            <li>Espada pequena</li>
+            <li>Escudo pequeno</li>
+            <li>Pote de moedas</li>
+        </ol>
+        <li>Baú de recompensa 3</li>
+        <li>Baú de recompensa 4</li>
+    </ol>
+    
+    <h3>Exemplos de links</h3>
+    <p>Acesse esse link aqui <a href="https://pt.wikipedia.org/wiki/Batata" target="_blank" >wiki batata</a> para informações sobre batatas </p>
+
+    <h3>Exemplo de imagens dinãmicas</h3>
+    <picture>
+        <source media="(max-width: 600px)" srcset="../assets/image/RDR2-pequena.jpg" type="image/jpg">
+
+        <source media="(max-width: 1050px)" srcset="../assets/image/RDR2-media.jpg" type="image/jpg">
+
+        <img src="../assets/image/RDR2-grande.jpg" alt="Flex Imagem Arthur">
+    </picture>
 </body> 
 </html>
