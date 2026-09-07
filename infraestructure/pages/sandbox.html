@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Sandbox</title>
+    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Adiciona o Link para o CSS externo -->
+</head>
+<body>
+    <h1>Atividade 4</h1>
+    <h2>Reproduzindo audio em html</h2>
+    <p>Escuta ai essa pedrada papai</p>
+    <!-- Usando a tag <audio> para reproduzir um arquivo de áudio -->
+    <audio preload="metadata" controls autoplay loop>
+        <source src="../assets/audio/TheWitcherSoundtrack.mp3" type="audio/mpeg"> 
+        <source src="../assets/audio/TheWitcherSoundtrack.ogg" type="audio/ogg">
+        <source src="../assets/audio/TheWitcherSoundtrack.wav" type="audio/wav">
+        <p>Seu navegador não suporta a reprodução deste áudio.</p> <!--Caso nenhum dos formatos seja suportado-->
+    </audio>
+    <!-- Usando a tag <source> para diferentes formatos de áudio, testando
+     a compatibilidade com o navegador em orfem de prioridade de cima para baixo-->
+
+    <h2>Incorporando Video externo</h2>
+    <p>Assista esse video de como a gamificação pode ajudar na sua rotina</p>
+    <!-- Usando a tag <iframe> para incorporar um vídeo do YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bCB6NGS-GUs?si=a46YAVT7rWAYCY6V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
