@@ -1,28 +1,37 @@
+:root{
+    /* Paleta Triádica - Roxo, Laranja e Verde */
+    --cor-principal: #6b2fa0;    /* roxo: identidade geral do projeto */
+    --cor-enfrentar: #ff7a29;    /* laranja: modo "enfrentar chefe" */
+    --cor-descanso: #2fa084;     /* verde: modo "descanso/cura" */
+    --cor-fundo: #1a1225;        /* fundo escuro, clima de UI de jogo */
+    --cor-texto-claro: #f5f0ff;
+}
+
 body{ 
-    background-color: #4242a5; /*Define a cor de fundo da página*/
+    background-color: var(--cor-fundo); /*Define a cor de fundo da página*/
     font-family: 'Roboto', sans-serif; /*Define a fonte utilizada na página*/
 }
 
 h1{ 
-    color: #fff; /*Define a cor do título*/
+    color: var(--cor-texto-claro); /*Define a cor do título*/
     text-align: center; /*Centraliza o texto do título*/
     margin-top: 50px; /*Define a margem superior do título*/
 }
 
 p{
-    color: #fff;
+    color: var(--cor-texto-claro);
     text-align: center;
     margin-top: 20px;
 }
 
 h2{
-    color: #fff;
+    color: var(--cor-texto-claro);
     text-align: center;
     margin-top: 30px;
 }
 
 h3{
-    color: #fff;
+    color: var(--cor-texto-claro);
     
     margin-top: 20px;
 }
@@ -40,11 +49,69 @@ video{
 }
 
 ol{
-    color: #fff;
+    color: var(--cor-texto-claro);
     
 }
 
 a{
-    color: #d3d620;
+    color: var(--cor-enfrentar);
     text-decoration: none;
+}
+
+/* ---- Estilos da página Paleta de Cores ---- */
+
+.paleta-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.paleta-swatches{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.swatch{
+    width: 150px;
+    padding: 20px 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--cor-texto-claro);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 14px;
+}
+
+.swatch-principal{ background-color: var(--cor-principal); border: 2px solid var(--cor-texto-claro); }
+.swatch-enfrentar{ background-color: var(--cor-enfrentar); color: #1a1225; }
+.swatch-descanso{ background-color: var(--cor-descanso); color: #1a1225; }
+.swatch-fundo{ background-color: var(--cor-fundo); border: 2px solid var(--cor-texto-claro); }
+
+.btn-demo{
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-enfrentar{
+    background-color: var(--cor-enfrentar);
+    color: #1a1225;
+}
+
+.btn-descanso{
+    background-color: var(--cor-descanso);
+    color: #1a1225;
+}
+
+.card-paleta{
+    background-color: var(--cor-principal);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
 }
