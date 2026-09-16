@@ -58,6 +58,78 @@ a{
     text-decoration: none;
 }
 
+/* ---- Tags semânticas de agrupamento (header, nav, main, section, article, aside, footer) ---- */
+
+header{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+nav a{
+    color: var(--cor-descanso);
+    font-weight: bold;
+}
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+section{
+    margin-top: 30px;
+}
+
+.card-atividade{
+    display: block;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.card-atividade h3{
+    margin-top: 0;
+}
+
+.card-atividade p{
+    text-align: left;
+    margin-top: 10px;
+}
+
+aside{
+    display: block;
+    background-color: var(--cor-fundo);
+    border: 2px dashed var(--cor-descanso);
+    color: var(--cor-texto-claro);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+aside p{
+    text-align: left;
+    margin: 0;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 2px solid var(--cor-principal);
+    color: var(--cor-texto-claro);
+    font-size: 14px;
+}
+
 /* ---- Estilos da página Paleta de Cores ---- */
 
 .paleta-container{
