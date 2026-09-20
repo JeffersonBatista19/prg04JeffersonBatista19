@@ -66,16 +66,31 @@ header{
     border-bottom: 2px solid var(--cor-principal);
 }
 
-nav{
+/* Menu de navegação */
+nav#menu ul{
     display: flex;
     justify-content: center;
     gap: 20px;
+    list-style: none; /* remove as bolinhas da lista */
+    padding: 0;
     margin-top: 15px;
 }
 
-nav a{
+nav#menu a{
     color: var(--cor-descanso);
     font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav#menu a:hover{
+    background-color: var(--cor-principal);
+}
+
+/* Deixa img, picture e iframe responsivos (nunca maiores que o container) */
+img, picture, iframe{
+    max-width: 100%;
+    height: auto;
 }
 
 main{
@@ -128,6 +143,15 @@ footer{
     border-top: 2px solid var(--cor-principal);
     color: var(--cor-texto-claro);
     font-size: 14px;
+}
+
+/* Responsividade: em telas pequenas o menu vira coluna, ocupando toda a largura */
+@media (max-width: 600px){
+    nav#menu ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 /* ---- Estilos da página Paleta de Cores ---- */
