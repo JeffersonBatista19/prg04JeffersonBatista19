@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Área de Login</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="atividade-3.html">Atividade 3</a></li>
+                <li><a href="sandbox.html">Sandbox</a></li>
+                <li><a href="paleta.html">Paleta de Cores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <!-- novalidate: desativa o balão padrão do navegador para usarmos nosso próprio feedback de erro -->
+            <form id="form-login" novalidate>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    <span class="erro" id="erro-email"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required minlength="6" placeholder="Mínimo 6 caracteres">
+                    <span class="erro" id="erro-senha"></span>
+                </div>
+
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Jefferson Batista &mdash; Projeto "Gameficação de Rotinas"</p>
+    </footer>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+</html>

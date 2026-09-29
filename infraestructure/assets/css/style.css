@@ -145,6 +145,102 @@ footer{
     font-size: 14px;
 }
 
+/* Botão de acesso ao Login, no header */
+.btn-login{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: var(--cor-enfrentar);
+    color: #1a1225;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* ---- Formulário de Login ---- */
+
+#form-login{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.campo{
+    margin-bottom: 20px;
+}
+
+.campo label{
+    display: block;
+    color: var(--cor-texto-claro);
+    margin-bottom: 5px;
+}
+
+.campo input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--cor-principal);
+}
+
+/* Destaca em vermelho o campo que falhou na validação (classe aplicada pelo login.js) */
+.campo input.invalido{
+    border-color: crimson;
+}
+
+.erro{
+    display: block;
+    color: crimson;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#form-login button{
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-descanso);
+    color: #1a1225;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ---- Tabela do Painel Administrativo ---- */
+
+#tabela-usuarios{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: var(--cor-texto-claro);
+}
+
+#tabela-usuarios th, #tabela-usuarios td{
+    border: 1px solid var(--cor-principal);
+    padding: 10px;
+    text-align: left;
+}
+
+#tabela-usuarios thead{
+    background-color: var(--cor-principal);
+}
+
+.btn-editar, .btn-excluir{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar{
+    background-color: var(--cor-descanso);
+    color: #1a1225;
+}
+
+.btn-excluir{
+    background-color: var(--cor-enfrentar);
+    color: #1a1225;
+}
+
 /* Responsividade: em telas pequenas o menu vira coluna, ocupando toda a largura */
 @media (max-width: 600px){
     nav#menu ul{
