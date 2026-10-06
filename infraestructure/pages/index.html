@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="icon" href="../assets/favicon.ico">
-    <link rel="stylesheet" href="../assets/css/style.css"> <!-- Adiciona o Link para o CSS externo -->
+    <!-- Bootstrap 5 via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> <!-- nosso CSS vem depois para poder sobrescrever o Bootstrap -->
 </head>
 <body>
 
@@ -30,36 +32,45 @@
 
         <!-- SECTION: seção temática de apresentação do projeto -->
         <section id="sobre">
-            <p>Esta é a minha página inicial.</p>
+            <p class="lead">Esta é a minha página inicial.</p>
         </section>
 
         <!-- SECTION: seção temática com as atividades do projeto -->
         <section id="atividades">
             <h2>Gameficação de Rotinas</h2>
 
-            <!-- Container flex: cards empilhados no mobile, lado a lado a partir do tablet/desktop (ver style.css) -->
-            <div class="cards">
-                <!-- ARTICLE: conteúdo independente (card) para cada atividade -->
-                <article class="card-atividade">
-                    <h3>Atividade 3</h3>
-                    <p>Página com imagem responsiva e listas sobre a pesquisa de gameficação.</p>
-                    <!-- Usando a tag <a> para criar um link que abra o arquivo atividade-3.html em uma nova aba -->
-                    <a href="atividade-3.html" target="_blank">Ver Atividade 3</a>
-                </article>
+            <!-- Grid do Bootstrap: 1 coluna no celular, 2 no tablet (md), 3 no desktop (lg) -->
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Componente card do Bootstrap -->
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Atividade 3</h3>
+                            <p class="card-text">Página com imagem responsiva e listas sobre a pesquisa de gameficação.</p>
+                            <a href="atividade-3.html" target="_blank" class="btn btn-primary btn-sm">Ver Atividade 3</a>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="card-atividade">
-                    <h3>Atividade 4</h3>
-                    <p>Área de testes livres para experimentar HTML e CSS.</p>
-                    <!-- Usando a tag <a> para criar um link que abra o arquivo sandbox.html em uma nova aba -->
-                    <a href="sandbox.html" target="_blank">Área de Sandbox</a>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Atividade 4</h3>
+                            <p class="card-text">Área de testes livres para experimentar HTML e CSS.</p>
+                            <a href="sandbox.html" target="_blank" class="btn btn-primary btn-sm">Área de Sandbox</a>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="card-atividade">
-                    <h3>Paleta de Cores do Projeto</h3>
-                    <p>Identidade visual e justificativa das cores usadas no projeto.</p>
-                    <!-- Usando a tag <a> para criar um link que abra o arquivo paleta.html em uma nova aba -->
-                    <a href="paleta.html" target="_blank">Ver Paleta de Cores</a>
-                </article>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Paleta de Cores do Projeto</h3>
+                            <p class="card-text">Identidade visual e justificativa das cores usadas no projeto.</p>
+                            <a href="paleta.html" target="_blank" class="btn btn-primary btn-sm">Ver Paleta de Cores</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 

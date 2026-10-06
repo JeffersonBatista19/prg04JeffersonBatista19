@@ -10,15 +10,15 @@ form.addEventListener('submit', function (evento) {
 
     if (email.value.trim() === '') {
         erroEmail.textContent = 'O e-mail é obrigatório.';
-        email.classList.add('invalido');
+        email.classList.add('is-invalid');
         valido = false;
     } else if (!email.checkValidity()) {
         erroEmail.textContent = 'Digite um e-mail em um formato válido.';
-        email.classList.add('invalido');
+        email.classList.add('is-invalid');
         valido = false;
     } else {
         erroEmail.textContent = '';
-        email.classList.remove('invalido');
+        email.classList.remove('is-invalid');
     }
 
     const senha = document.getElementById('senha');
@@ -26,15 +26,15 @@ form.addEventListener('submit', function (evento) {
 
     if (senha.value.trim() === '') {
         erroSenha.textContent = 'A senha é obrigatória.';
-        senha.classList.add('invalido');
+        senha.classList.add('is-invalid');
         valido = false;
     } else if (senha.value.length < 6) {
         erroSenha.textContent = 'A senha deve ter pelo menos 6 caracteres.';
-        senha.classList.add('invalido');
+        senha.classList.add('is-invalid');
         valido = false;
     } else {
         erroSenha.textContent = '';
-        senha.classList.remove('invalido');
+        senha.classList.remove('is-invalid');
     }
 
     // Se passou nas validações, simula o login bem-sucedido e redireciona ao painel

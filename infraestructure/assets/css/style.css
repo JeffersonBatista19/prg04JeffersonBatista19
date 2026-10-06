@@ -111,27 +111,15 @@ section{
     margin-top: 30px;
 }
 
-/* Container Flex dos cards de atividade: empilhados no celular */
-.cards{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card-atividade{
+/* Tema do componente .card do Bootstrap, para combinar com a paleta do projeto */
+.card{
     background-color: var(--cor-principal);
+    border: none;
+}
+
+.card-title, .card-text{
     color: var(--cor-texto-claro);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.card-atividade h3{
-    margin-top: 0;
-}
-
-.card-atividade p{
     text-align: left;
-    margin-top: 10px;
 }
 
 aside{
@@ -177,90 +165,14 @@ footer{
     margin: 0 auto;
 }
 
-.campo{
-    margin-bottom: 20px;
-}
-
-.campo label{
-    display: block;
-    color: var(--cor-texto-claro);
-    margin-bottom: 5px;
-}
-
-.campo input{
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid var(--cor-principal);
-    box-sizing: border-box;
-}
-
-/* Destaca em vermelho o campo que falhou na validação (classe aplicada pelo login.js) */
-.campo input.invalido{
-    border-color: crimson;
-}
-
-.erro{
-    display: block;
-    color: crimson;
-    font-size: 13px;
-    margin-top: 5px;
-}
-
-#form-login button{
-    width: 100%;
-    padding: 12px;
-    background-color: var(--cor-descanso);
-    color: #1a1225;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
+/* .form-label, .form-control, .invalid-feedback e .is-invalid já vêm prontos do Bootstrap */
 
 /* ---- Tabela do Painel Administrativo ---- */
 
-/* No celular a tabela não encolhe: só rola na horizontal dentro do wrapper */
-.tabela-wrapper{
-    width: 100%;
-    overflow-x: auto;
-}
-
+/* .table, .table-striped, .table-hover e .table-responsive já vêm do Bootstrap;
+   só garantimos uma largura mínima para não espremer as colunas no celular */
 #tabela-usuarios{
-    width: 100%;
-    min-width: 500px; /* evita que as colunas fiquem espremidas no celular */
-    border-collapse: collapse;
-    margin-top: 20px;
-    color: var(--cor-texto-claro);
-}
-
-#tabela-usuarios th, #tabela-usuarios td{
-    border: 1px solid var(--cor-principal);
-    padding: 10px;
-    text-align: left;
-}
-
-#tabela-usuarios thead{
-    background-color: var(--cor-principal);
-}
-
-.btn-editar, .btn-excluir{
-    padding: 6px 12px;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.btn-editar{
-    background-color: var(--cor-descanso);
-    color: #1a1225;
-}
-
-.btn-excluir{
-    background-color: var(--cor-enfrentar);
-    color: #1a1225;
+    min-width: 500px;
 }
 
 /* ---- Estilos da página Paleta de Cores ---- */
@@ -343,16 +255,6 @@ footer{
     main, .paleta-container{
         max-width: 700px;
     }
-
-    /* A partir do tablet os cards ficam lado a lado, quebrando linha se precisar */
-    .cards{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .card-atividade{
-        flex: 1 1 45%; /* cada card ocupa ~metade da linha */
-    }
 }
 
 /* =====================================================================
@@ -362,10 +264,5 @@ footer{
 
     main, .paleta-container{
         max-width: 900px;
-    }
-
-    /* No desktop os 3 cards cabem lado a lado numa única linha */
-    .card-atividade{
-        flex: 1 1 0;
     }
 }
